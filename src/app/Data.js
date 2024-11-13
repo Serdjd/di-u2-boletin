@@ -30,3 +30,15 @@ export const persons =
         age: 21
     }
 ]
+
+export const tasks = 
+[
+    {
+        id: 0,
+        description: 'Comprar pan'
+    },
+    {
+        id: 1,
+        description: 'Tender la ropa'
+    }
+]

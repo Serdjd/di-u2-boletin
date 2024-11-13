@@ -1,6 +1,6 @@
 import React, { useState } from "react"
 
-export default function Parent({children}){
+export default function Parent({children,text}){
     const [data,sendData] = useState('')
     function sendDatatoParent() {
         sendData('Vengo del hijo')
@@ -8,7 +8,7 @@ export default function Parent({children}){
     return(
         <div>
             <p>{data}</p>
-            {React.cloneElement(children, { sendData: sendDatatoParent })}
+            {React.cloneElement(children, {text : text,sendData: sendDatatoParent })}
         </div>
     )
 }

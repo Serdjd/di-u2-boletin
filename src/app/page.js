@@ -4,10 +4,13 @@ import styles from "./page.module.css";
 import Greeting from "./Greeting";
 import Card from "./Card";
 import Counter from "./counter";
+import Counter2 from "./Counter2"
 import ProductList from "./ProductList";
 import { persons } from "./Data";
 import UserCard from "./UserCard";
 import Parent, { Children } from "./Parent";
+import ToogleSwitch from "./ToogleSwitch";
+import ToDoList from "./ToDoList";
 export default function Home() {
   let cards = []
   for (let index = 0; index < 5; index++) {
@@ -32,9 +35,12 @@ export default function Home() {
       <div>
         {users}
       </div>
-      <Parent>
-        <Children text={"Soy el hijo"}/>
+      <Parent text={"Hello"}>
+        <Children/>
       </Parent>
+      <ToogleSwitch/>
+      <ToDoList/>
+      <Counter2/>
     </div>
   );
 }
