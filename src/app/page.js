@@ -6,11 +6,17 @@ import Card from "./Card";
 import Counter from "./counter";
 import Counter2 from "./Counter2"
 import ProductList from "./ProductList";
-import { persons } from "./Data";
+import { persons, shops, opciones } from "./Data";
 import UserCard from "./UserCard";
 import Parent, { Children } from "./Parent";
 import ToogleSwitch from "./ToogleSwitch";
 import ToDoList from "./ToDoList";
+import LoginControl from "./LoginControl";
+import ProductStock from "./ProductStock";
+import ContactForm from "./ContactForm";
+import ShoppingList from "./ShoppingList";
+import DropDown from "./DropDown";
+import ImageList from "./ImageGallery";
 export default function Home() {
   let cards = []
   for (let index = 0; index < 5; index++) {
@@ -27,7 +33,7 @@ export default function Home() {
     (person) => (<UserCard person={person} key={person.id}/>)
   )
   return (
-    <div>
+    <>
       <Greeting name={"Pepe"}/>
       <ProductList/>
       <Counter/>
@@ -41,6 +47,13 @@ export default function Home() {
       <ToogleSwitch/>
       <ToDoList/>
       <Counter2/>
-    </div>
+      <LoginControl log={false}/>
+      <ProductStock name={'Ron'} inStock={false}/>
+      <ContactForm/>
+      <ShoppingList products={shops}/>
+      <DropDown opciones={opciones}/>
+      <br/>
+      <ImageList/>
+    </>
   );
 }
